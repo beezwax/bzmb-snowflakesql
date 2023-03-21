@@ -45,7 +45,7 @@ const statementSchema = {
 
 async function bzmbSnowflakesql(fastify, options) {
   fastify.post(
-    "/bzmb-snoflakesql-auth",
+    "/bzmb-snowflakesql-auth",
     { schema: authSchema },
     async (req, res) => {
     req.body;
@@ -62,7 +62,7 @@ async function bzmbSnowflakesql(fastify, options) {
   });
 
   fastify.post(
-    "/bzmb-snoflakesql-statement",
+    "/bzmb-snowflakesql-statement",
     { schema: statementSchema },
     async (req, res) => {
     try {
