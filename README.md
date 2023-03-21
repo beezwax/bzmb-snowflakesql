@@ -4,7 +4,7 @@ A [bzBond-server](https://github.com/beezwax/bzBond/tree/main/packages/bzBond-se
 
 ## Installation
 
-On a server with bzBond-server installed run the following command:
+On a FileMaker server with bzBond-server installed run the following command:
 
 `/var/www/bzbond-server/bin/install-microbond.sh bzmb-snowflakesql https://github.com/beezwax/bzmb-snowflakesql`
 
