@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "bzmb-snowflakesql",
   "version": "1.0.0",
-  "description": "A minimal example microbond for bzBond server",
+  "description": "A bzBond Microbond to integrate with the Snowflake SQL API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
