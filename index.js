@@ -43,7 +43,7 @@ const statementSchema = {
   }
 };
 
-async function bzmbSnowflakeSql(fastify, options) {
+async function bzmbSnowflakesql(fastify, options) {
   fastify.post(
     "/bzmb-snoflakesql-auth",
     { schema: authSchema },
@@ -78,4 +78,4 @@ async function bzmbSnowflakeSql(fastify, options) {
   });
 }
 
-module.exports = { microbond: bzmbSnowflakeSql };
+module.exports = { microbond: bzmbSnowflakesql };
