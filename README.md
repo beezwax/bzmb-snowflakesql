@@ -70,6 +70,9 @@ In a server-side FileMaker script run `bzBondRelay` script with parameters in th
     // Required. The snowflake database
     "database": "string",
 
+    // Required. The snowflake schema
+    "schema": "string",
+
     // Required. The snowflake user role
     "role": "string",
 
