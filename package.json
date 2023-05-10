@@ -9,7 +9,7 @@
   "author": "Beezwax",
   "license": "ISC",
   "dependencies": {
-    "http-proxy-agent": "^5.0.0",
+    "https-proxy-agent": "^6.1.0",
     "node-fetch": "^2.6.7"
   }
 }

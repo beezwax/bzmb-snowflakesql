@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const https = require('https');
-const HttpProxyAgent = require('http-proxy-agent');
+const HttpsProxyAgent = require('https-proxy-agent');
 
 const statement = async (config = {}) => {
   const { url, statement, database, schema, role, token, proxy, wait = 300 } = config;
@@ -21,7 +21,7 @@ const statement = async (config = {}) => {
     body: JSON.stringify(body)
   };
   if(proxy) {
-    const httpsAgent = new HttpProxyAgent(proxy);
+    const httpsAgent = new HttpsProxyAgent(proxy);
     options.agent = httpsAgent;
   }
 
