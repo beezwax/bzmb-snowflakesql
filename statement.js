@@ -68,7 +68,7 @@ async function getPartition (baseUrl, token, statementHandle, proxy, partition) 
   };
   const options = {headers};
   if(proxy) {
-    const httpsAgent = new HttpProxyAgent(proxy);
+    const httpsAgent = new HttpsProxyAgent.HttpsProxyAgent(proxy);
     options.agent = httpsAgent;
   }
   const url = `${baseUrl}${statementHandle}?partition=${partition}`;
