@@ -14,7 +14,8 @@ const authSchema = {
       url: { type: "string" },
       refreshToken: { type: "string" },
       clientId: { type: "string" },
-      clientSecret: { type: "string" }
+      clientSecret: { type: "string" },
+      acceptUnauthorized: { type: "boolean" }
     }
   }
 };
