@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const https = require('https');
+const { access } = require('fs');
 
 const auth = async (config = {}) => {
   const grantType = "refresh_token";
@@ -26,7 +27,11 @@ const auth = async (config = {}) => {
 
   const response = await fetch(config.url, options);
   const json = await response.json();
-  return json.access_token;
+  const access_token = json.access_token;
+  if (!access_token) {
+    throw new Error(JSON.stringify(json));
+  }
+  return access_token;
 };
 
 module.exports = auth;
