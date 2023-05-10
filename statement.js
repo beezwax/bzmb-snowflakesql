@@ -21,7 +21,7 @@ const statement = async (config = {}) => {
     body: JSON.stringify(body)
   };
   if(proxy) {
-    const httpsAgent = new HttpsProxyAgent(proxy);
+    const httpsAgent = new HttpsProxyAgent.HttpsProxyAgent(proxy);
     options.agent = httpsAgent;
   }
 
