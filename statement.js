@@ -41,6 +41,8 @@ const statement = async (config = {}) => {
     } 
   } else if(initialResponse.code === "390318"){
     throw new Error(initialResponse.message, {cause: "390318"})
+  } else if(initialResponse.code === "390303"){
+    throw new Error(initialResponse.message, {cause: "390303"})
   } else {
     response = initialResponse;
   }
