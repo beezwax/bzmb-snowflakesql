@@ -90,7 +90,7 @@ async function getAsyncQueryResult (baseUrl, token, statementHandle, proxy, wait
   const options = {headers};
 
   if(proxy) {
-    const httpsAgent = new HttpProxyAgent(proxy);
+    const httpsAgent = new HttpsProxyAgent.HttpsProxyAgent(proxy);
     options.agent = httpsAgent;
   }
 
