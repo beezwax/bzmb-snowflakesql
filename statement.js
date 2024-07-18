@@ -4,12 +4,14 @@ const HttpsProxyAgent = require('https-proxy-agent');
 
 const statement = async (config = {}) => {
   const { url, statement, database, schema, role, token, proxy, wait = 300 } = config;
+  const timeout = wait === 0 ? 0 : wait ? Math.min(wait, 604800) : undefined; 
   const method = "POST";
   const body = {
     statement,
     database,
     schema,
-    role
+    role,
+    timeout
   };
   const headers = {
 	  "Content-type": "application/json",
@@ -105,6 +107,8 @@ async function getAsyncQueryResult (baseUrl, token, statementHandle, proxy, wait
       await new Promise(resolve => setTimeout(resolve, 1000));
       return await getAsyncQueryResult(baseUrl, token, statementHandle, proxy, wait, attempts);
     }
+  } else if (!response?.resultSetMetaData?.partitionInfo) {
+    throw new Error(`No partition info found in reponse. Response: ${JSON.stringify(response)}`);
   } else {
     return response;
   }
