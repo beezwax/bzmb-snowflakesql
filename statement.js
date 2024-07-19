@@ -26,6 +26,7 @@ const statement = async (config = {}) => {
     const httpsAgent = new HttpsProxyAgent.HttpsProxyAgent(proxy);
     options.agent = httpsAgent;
   }
+  console.log(JSON.stringify(body));
 
   // Run query
   const result = await fetch(url, options);
