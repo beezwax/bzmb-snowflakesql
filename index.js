@@ -49,7 +49,6 @@ async function bzmbSnowflakesql(fastify, options) {
     "/bzmb-snowflakesql-auth",
     { schema: authSchema },
     async (req, res) => {
-    req.body;
     try {
       const token = await auth(req.body);
       res
